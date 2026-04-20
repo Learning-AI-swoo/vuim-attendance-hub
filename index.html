@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Attendance & Makeup Resources — VUIM Spring 2026</title>
+    <meta name="description" content="Role-based hub for VUIM clinic attendance and makeup procedures — Spring 2026.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="text-slate-900 antialiased py-8 px-4 md:px-8">
+
+    <div class="max-w-5xl mx-auto bg-white p-8 md:p-14 shadow-md border border-slate-200 rounded-sm">
+
+        <header class="border-b-2 border-slate-800 pb-6 mb-10">
+            <div class="flex items-center gap-2 mb-3 text-slate-500 font-semibold tracking-wider text-xs uppercase">
+                <i data-lucide="building-2" class="w-4 h-4"></i>
+                Virginia University of Integrative Medicine &bull; Clinic Resource Hub
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
+                Clinic Attendance &amp; Makeup Resources — Spring 2026
+            </h1>
+            <p class="text-slate-700 text-lg leading-relaxed max-w-3xl">
+                A consolidated reference for clinic attendance and makeup shift procedures. Choose the role below that matches your responsibilities; each page opens with the quick-reference you need on the floor and continues into the full operational guide.
+            </p>
+        </header>
+
+        <main>
+            <h2 class="sr-only">Choose your role</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <a href="student/" class="group block bg-white border border-slate-300 hover:border-slate-800 hover:shadow-lg transition-all rounded p-6">
+                    <div class="flex items-center justify-center w-12 h-12 rounded bg-slate-100 border border-slate-300 text-slate-700 mb-5 group-hover:bg-slate-800 group-hover:text-white transition-colors">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Student</h3>
+                    <p class="text-slate-600 leading-snug mb-4">Clinic interns. Tardiness and absence rules, makeup request process, and a scenario FAQ.</p>
+                    <span class="inline-flex items-center text-slate-700 font-semibold text-sm group-hover:text-slate-900">
+                        Open student guide
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform"></i>
+                    </span>
+                </a>
+
+                <a href="supervisor/" class="group block bg-white border border-slate-300 hover:border-slate-800 hover:shadow-lg transition-all rounded p-6">
+                    <div class="flex items-center justify-center w-12 h-12 rounded bg-slate-100 border border-slate-300 text-slate-700 mb-5 group-hover:bg-slate-800 group-hover:text-white transition-colors">
+                        <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Supervisor</h3>
+                    <p class="text-slate-600 leading-snug mb-4">Clinical supervisors. Recording attendance, verifying makeups on the LCS, and the absence-resolution sequence.</p>
+                    <span class="inline-flex items-center text-slate-700 font-semibold text-sm group-hover:text-slate-900">
+                        Open supervisor guide
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform"></i>
+                    </span>
+                </a>
+
+                <a href="staff/" class="group block bg-white border border-slate-300 hover:border-slate-800 hover:shadow-lg transition-all rounded p-6">
+                    <div class="flex items-center justify-center w-12 h-12 rounded bg-slate-100 border border-slate-300 text-slate-700 mb-5 group-hover:bg-slate-800 group-hover:text-white transition-colors">
+                        <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Staff</h3>
+                    <p class="text-slate-600 leading-snug mb-4">Reception &amp; administrative staff. LCS verification rules and what staff should never treat as approval.</p>
+                    <span class="inline-flex items-center text-slate-700 font-semibold text-sm group-hover:text-slate-900">
+                        Open staff SOP
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform"></i>
+                    </span>
+                </a>
+
+            </div>
+
+            <aside class="mt-10 bg-slate-50 border-l-4 border-slate-300 p-5 text-slate-700 flex items-start gap-3">
+                <i data-lucide="info" class="w-5 h-5 text-slate-500 flex-shrink-0 mt-0.5"></i>
+                <p class="leading-relaxed">
+                    These pages are performance-support tools. The <strong>VUIM Student Clinic Handbook</strong> and <strong>Supervisor Handbook</strong> remain the formal authority on all institutional policies.
+                </p>
+            </aside>
+        </main>
+
+        <footer class="mt-12 pt-6 border-t border-slate-200 text-center text-sm text-slate-500">
+            <p>Virginia University of Integrative Medicine &middot; Questions: <a href="mailto:dce@vuim.edu" class="text-slate-700 underline hover:text-slate-900">dce@vuim.edu</a> &middot; The VUIM Handbooks remain the formal authority.</p>
+            <p class="mt-1 text-xs text-slate-400">Effective: Spring 2026 &middot; Updated 04.18.26</p>
+        </footer>
+
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

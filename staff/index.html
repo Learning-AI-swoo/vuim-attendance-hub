@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Makeup Scheduling SOP — VUIM Spring 2026</title>
+    <meta name="description" content="VUIM clinic reception &amp; staff: LCS verification rules, what not to treat as approval, and DCE escalation triggers.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="text-slate-900 antialiased py-6 px-4 md:px-8">
+
+    <div class="max-w-6xl mx-auto">
+
+        <nav class="no-print flex items-center justify-between mb-6 text-sm">
+            <a href="../" class="inline-flex items-center text-slate-600 hover:text-slate-900 font-medium">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-1.5"></i> Back to hub
+            </a>
+            <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 border border-slate-300 rounded text-slate-700 hover:bg-slate-100 hover:border-slate-400 font-medium">
+                <i data-lucide="printer" class="w-4 h-4"></i> Print
+            </button>
+        </nav>
+
+        <!-- ============================================================ -->
+        <!-- LAYER 1 — HERO QUICK REFERENCE (At-a-Glance Card)            -->
+        <!-- ============================================================ -->
+        <section id="quick-reference" class="bg-white p-8 md:p-12 shadow-md border border-slate-200 rounded-sm mb-10">
+
+            <header class="border-b-2 border-slate-800 pb-6 mb-8">
+                <div class="flex items-center gap-2 mb-2 text-slate-500 font-semibold tracking-wider text-xs uppercase">
+                    <i data-lucide="building-2" class="w-4 h-4"></i>
+                    Virginia University of Integrative Medicine &bull; Reception &amp; Staff Quick Reference
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-3 leading-tight">
+                    Staff Makeup Scheduling — At a Glance
+                </h1>
+                <div class="flex items-start gap-3 bg-slate-50 p-4 border-l-4 border-slate-300 text-slate-700">
+                    <i data-lucide="info" class="w-5 h-5 text-slate-500 flex-shrink-0 mt-0.5"></i>
+                    <p class="text-[1.05rem] leading-relaxed">
+                        Staff verify, coordinate, and escalate. They do not approve, adjudicate, or determine credit. Use this card during the shift; pin to the front-desk board.
+                    </p>
+                </div>
+            </header>
+
+            <!-- Five core takeaways as numbered cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <div class="print-break-inside-avoid bg-blue-50 border border-blue-200 rounded p-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-7 h-7 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold text-xs">1</div>
+                        <h3 class="font-bold uppercase tracking-wide text-xs text-blue-800">LCS Verification</h3>
+                    </div>
+                    <p class="text-slate-800 text-sm leading-relaxed">If the student is <strong>not listed in the <span class="text-blue-700">blue Makeup section</span></strong> of the LCS for that date, do not operationalize the makeup.</p>
+                </div>
+
+                <div class="print-break-inside-avoid bg-slate-50 border border-slate-300 rounded p-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-7 h-7 rounded-full bg-slate-700 text-white flex items-center justify-center font-bold text-xs">2</div>
+                        <h3 class="font-bold uppercase tracking-wide text-xs text-slate-700">Operational Scheduling Follows LCS</h3>
+                    </div>
+                    <p class="text-slate-800 text-sm leading-relaxed">Always check the LCS first. Do not operationalize or schedule a makeup placement before verifying.</p>
+                </div>
+
+                <div class="print-break-inside-avoid bg-rose-50 border border-rose-300 rounded p-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-7 h-7 rounded-full bg-rose-700 text-white flex items-center justify-center font-bold text-xs">3</div>
+                        <h3 class="font-bold uppercase tracking-wide text-xs text-rose-800">No Verbal Approvals</h3>
+                    </div>
+                    <p class="text-slate-800 text-sm leading-relaxed">Always require formal operational confirmation. Verbal claims, email chains, and supervisor permission are <strong>not</strong> proof.</p>
+                </div>
+
+                <div class="print-break-inside-avoid bg-amber-50 border border-amber-300 rounded p-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-7 h-7 rounded-full bg-amber-700 text-white flex items-center justify-center font-bold text-xs">4</div>
+                        <h3 class="font-bold uppercase tracking-wide text-xs text-amber-800">Consult Supervisors</h3>
+                    </div>
+                    <p class="text-slate-800 text-sm leading-relaxed">Defer to the on-site supervisor for all late-patient and group-placement decisions.</p>
+                </div>
+
+                <div class="print-break-inside-avoid bg-emerald-50 border border-emerald-300 rounded p-5 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-7 h-7 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-xs">5</div>
+                        <h3 class="font-bold uppercase tracking-wide text-xs text-emerald-800">Narrow Staff Role</h3>
+                    </div>
+                    <p class="text-slate-800 text-sm leading-relaxed">Staff <strong>verify, coordinate, and escalate.</strong> They do not approve makeup requests, adjudicate attendance rules, or determine treatment credit eligibility.</p>
+                </div>
+            </div>
+
+            <!-- Two operational rule callouts -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <aside class="print-break-inside-avoid bg-white border-2 border-slate-800 rounded">
+                    <div class="bg-slate-800 text-white px-4 py-2 flex items-center gap-2">
+                        <i data-lucide="x-circle" class="w-5 h-5"></i>
+                        <h3 class="font-bold uppercase tracking-wide text-xs">Never Treat as Proof of Approval</h3>
+                    </div>
+                    <ul class="p-4 space-y-2 text-sm text-slate-800">
+                        <li class="flex items-start gap-2"><i data-lucide="x" class="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0"></i> Verbal claims by the student</li>
+                        <li class="flex items-start gap-2"><i data-lucide="x" class="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0"></i> Email chains or informal messages</li>
+                        <li class="flex items-start gap-2"><i data-lucide="x" class="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0"></i> Supervisor permission alone</li>
+                    </ul>
+                </aside>
+
+                <aside class="print-break-inside-avoid bg-white border-2 border-slate-800 rounded">
+                    <div class="bg-slate-800 text-white px-4 py-2 flex items-center gap-2">
+                        <i data-lucide="alert-octagon" class="w-5 h-5"></i>
+                        <h3 class="font-bold uppercase tracking-wide text-xs">Late-Patient Rule (15 Min)</h3>
+                    </div>
+                    <div class="p-4 text-sm text-slate-800 space-y-2">
+                        <p>If a patient arrives <strong>15 or more minutes late</strong>, do <strong>not</strong> independently assure them they will be seen.</p>
+                        <p>Confirm with the supervisor whether the group can still accommodate. <strong>Supervisor has final authority.</strong></p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- LAYER 2 — FULL GUIDE                                         -->
+        <!-- ============================================================ -->
+        <div class="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8">
+
+            <aside class="no-print toc lg:sticky lg:top-6 lg:self-start text-sm">
+                <div class="bg-white border border-slate-200 rounded p-4 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">On this page</p>
+                    <nav>
+                        <ul class="space-y-1.5">
+                            <li><a href="#purpose" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">1. Purpose</a></li>
+                            <li><a href="#role" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">2. Staff Role</a></li>
+                            <li><a href="#lcs" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">3. LCS Source</a></li>
+                            <li><a href="#post-verification" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">4. After Verification</a></li>
+                            <li><a href="#not-proof" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">5. Not Proof of Approval</a></li>
+                            <li><a href="#defer-supervisor" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">6. Defer to Supervisor</a></li>
+                            <li><a href="#refer-dce" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">7. Refer to DCE</a></li>
+                            <li><a href="#not-responsible" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">8. Not Responsible For</a></li>
+                            <li><a href="#late-patients" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">9. Late Patients</a></li>
+                            <li><a href="#key-takeaways" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">10. Key Takeaways</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+
+            <article class="guide-section bg-white p-8 md:p-12 shadow-md border border-slate-200 rounded-sm">
+
+                <header class="border-b-2 border-slate-800 pb-6 mb-8">
+                    <div class="flex items-center gap-2 mb-2 text-slate-500 font-semibold tracking-wider text-xs uppercase">
+                        <i data-lucide="clipboard-check" class="w-4 h-4"></i> Staff SOP &bull; Spring 2026
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Staff Makeup Scheduling SOP</h2>
+                </header>
+
+                <section id="purpose" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Purpose and Scope <a class="anchor" href="#purpose">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed">This Standard Operating Procedure (SOP) defines the administrative role of clinic reception and staff in the student makeup process. Its purpose is to ensure that makeup scheduling occurs only for approved students and to maintain clinic flow through proper verification and communication.</p>
+                </section>
+
+                <section id="role" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">2. Staff Role in the Makeup Workflow <a class="anchor" href="#role">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">Reception and administrative staff support the clinical makeup process by:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                        <li>Verifying makeup approval via the Live Clinic Schedule (LCS).</li>
+                        <li>Supporting operational scheduling only after makeup approval is verified on the LCS.</li>
+                        <li>Coordinating with Supervisors regarding patient arrival and operational needs.</li>
+                    </ul>
+                    <p class="text-slate-700 leading-relaxed mt-3">Staff do <strong>not</strong> approve makeup requests, adjudicate attendance rules, or determine treatment credit eligibility.</p>
+                </section>
+
+                <section id="lcs" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">3. Using the LCS as the Staff-Facing Operational Source <a class="anchor" href="#lcs">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">The <strong>Live Clinic Schedule (LCS)</strong>, located in the Populi Links section, is the authoritative operational source of truth for staff.</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="lcs-blue" class="scroll-mt-24"><strong>The Blue Makeup Section:</strong> Staff must check the designated <span class="text-blue-700 font-semibold">blue section</span> of the LCS for the specific date and shift.</li>
+                        <li id="lcs-verification" class="scroll-mt-24"><strong>Verification:</strong> If a student's name and the specific makeup date are listed in this section, staff have the necessary operational context to schedule patients or update the roster as directed.</li>
+                        <li id="lcs-absence" class="scroll-mt-24"><strong>Absence of Entry:</strong> If a student is not listed in the blue makeup section for that specific date, they are not considered approved for operational scheduling.</li>
+                    </ul>
+                </section>
+
+                <section id="post-verification" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">4. Operational Scheduling After LCS Verification <a class="anchor" href="#post-verification">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed">Staff may support roster updates or patient scheduling <strong>only after</strong> the student's approved makeup placement is verified on the LCS and under supervisor direction.</p>
+                </section>
+
+                <section id="not-proof" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">5. What Staff Should Not Treat as Proof of Approval <a class="anchor" href="#not-proof">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">To maintain policy integrity, staff must never operationalize a makeup based on:</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="not-verbal" class="scroll-mt-24"><strong>Verbal Claims:</strong> A student stating they were told they could attend.</li>
+                        <li id="not-email" class="scroll-mt-24"><strong>Email Chains or Informal Messages:</strong> Messages that do not change the authoritative operational record.</li>
+                        <li id="not-supervisor" class="scroll-mt-24"><strong>Supervisor Permission:</strong> While supervisors manage the floor, they do not grant the underlying administrative approval for a makeup.</li>
+                    </ul>
+                </section>
+
+                <section id="defer-supervisor" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">6. When Staff Should Defer to the Supervisor <a class="anchor" href="#defer-supervisor">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">Staff must defer to the on-site Supervisor for all real-time clinic flow and instructional decisions, including:</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="defer-placement" class="scroll-mt-24"><strong>Group Placement:</strong> Determining which specific group the makeup intern will join for the shift.</li>
+                        <li id="defer-feasibility" class="scroll-mt-24"><strong>Group Feasibility:</strong> Assessing whether a specific group has the capacity to take on an additional intern or a specific patient.</li>
+                        <li id="defer-roles" class="scroll-mt-24"><strong>Intern Roles:</strong> Any questions regarding whether a student is acting as a lead or assistant intern.</li>
+                    </ul>
+                </section>
+
+                <section id="refer-dce" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">7. When Staff Should Refer Issues to the DCE <a class="anchor" href="#refer-dce">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">Staff should refer unresolved approval or workflow issues to the DCE Office (<a href="mailto:dce@vuim.edu" class="underline text-slate-900">dce@vuim.edu</a>), including when:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                        <li>The student believes they are approved, but their name is missing from the LCS.</li>
+                        <li>There is an operational discrepancy that cannot be resolved through the LCS and normal supervisor coordination.</li>
+                    </ul>
+                </section>
+
+                <section id="not-responsible" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">8. What Staff Are Not Responsible For <a class="anchor" href="#not-responsible">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">Staff roles are strictly administrative. Staff are not responsible for:</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="not-docs" class="scroll-mt-24"><strong>Documentation Adjudication:</strong> Reviewing or signing Clinical Diaries or other workbook materials.</li>
+                        <li id="not-credit" class="scroll-mt-24"><strong>Credit Enforcement:</strong> Determining if an intern earned treatment or observation credit.</li>
+                        <li id="not-attendance" class="scroll-mt-24"><strong>Attendance Decisions:</strong> Deciding if an absence should be excused or unexcused.</li>
+                    </ul>
+                </section>
+
+                <section id="late-patients" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">9. Related Scheduling Escalation Note: Late Patients <a class="anchor" href="#late-patients">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">In the interest of clinic flow and EAM educational standards, staff must follow this rule for patient punctuality:</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="late-15-min" class="scroll-mt-24"><strong>15-Minute Rule:</strong> If a patient arrives <strong>15 or more minutes late</strong> for their appointment, staff must not independently assure the patient they will be seen.</li>
+                        <li id="late-confirmation" class="scroll-mt-24"><strong>Supervisor Confirmation:</strong> Staff must confirm with the Supervisor whether the group can still accommodate the patient.</li>
+                        <li id="late-authority" class="scroll-mt-24"><strong>Final Authority:</strong> The Supervisor makes the final decision based on the remaining shift time and intern workload.</li>
+                    </ul>
+                </section>
+
+                <section id="key-takeaways" class="mb-8 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">10. Key Takeaways <a class="anchor" href="#key-takeaways">#</a></h2>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                        <li><strong>LCS Verification:</strong> If the student is not listed in the blue section of the LCS for that date, staff should not operationalize the makeup.</li>
+                        <li><strong>Operational Scheduling Follows LCS:</strong> Do not operationalize or schedule a makeup placement before checking the LCS.</li>
+                        <li><strong>No Verbal Approvals:</strong> Always require formal operational confirmation.</li>
+                        <li><strong>Consult Supervisors:</strong> Defer to supervisors for all late-patient and group-placement decisions.</li>
+                        <li><strong>Narrow Staff Role:</strong> Staff verify, coordinate, and escalate. They do not approve, adjudicate, or determine credit.</li>
+                    </ul>
+                </section>
+
+                <section id="disclaimer" class="border-t border-slate-200 pt-6 scroll-mt-24">
+                    <h3 class="text-base font-bold text-slate-700 mb-2">Disclaimer</h3>
+                    <p class="text-sm text-slate-600 italic leading-relaxed">This SOP serves as an operational guide for staff. Formal authority on all attendance and makeup matters rests with the VUIM Student and Supervisor Handbooks. In the event of a conflict between this guide and the Handbooks (as updated by official University memos), the Handbooks shall govern.</p>
+                </section>
+            </article>
+        </div>
+
+        <footer class="mt-10 text-center text-sm text-slate-500">
+            <p>Virginia University of Integrative Medicine &middot; Questions: <a href="mailto:dce@vuim.edu" class="text-slate-700 underline hover:text-slate-900">dce@vuim.edu</a> &middot; The VUIM Handbooks remain the formal authority.</p>
+            <p class="mt-1 text-xs text-slate-400">Effective: Spring 2026 &middot; Updated 04.18.26</p>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        function setupScrollSpy() {
+            const tocLinks = Array.from(document.querySelectorAll('.toc-link'));
+            if (!tocLinks.length) return;
+            const linkByHash = new Map(tocLinks.map(l => [l.getAttribute('href'), l]));
+            const sections = tocLinks.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+
+            const setActive = (hash) => {
+                tocLinks.forEach(l => l.classList.toggle('active', l === linkByHash.get(hash)));
+            };
+
+            const sectionForElement = (el) => {
+                while (el) {
+                    if (el.id && linkByHash.has('#' + el.id)) return el;
+                    el = el.parentElement;
+                }
+                return null;
+            };
+
+            tocLinks.forEach(l => l.addEventListener('click', () => setActive(l.getAttribute('href'))));
+
+            const syncFromHash = () => {
+                if (!window.location.hash) return;
+                const el = document.querySelector(window.location.hash);
+                if (!el) return;
+                const section = sectionForElement(el);
+                if (section) setActive('#' + section.id);
+            };
+
+            // rootMargin crops the IO viewport to a thin band ~12–20% from the top,
+            // so only the section whose heading is near the top of the content area qualifies.
+            const visibleIds = new Set();
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) visibleIds.add(e.target.id);
+                    else visibleIds.delete(e.target.id);
+                });
+                if (visibleIds.size === 0) return;
+                let bestId = null;
+                let bestTop = -Infinity;
+                for (const id of visibleIds) {
+                    const top = document.getElementById(id).getBoundingClientRect().top;
+                    if (top > bestTop) { bestTop = top; bestId = id; }
+                }
+                if (bestId) setActive('#' + bestId);
+            }, { rootMargin: '-12% 0px -80% 0px', threshold: 0 });
+            sections.forEach(s => observer.observe(s));
+
+            window.addEventListener('hashchange', syncFromHash);
+            syncFromHash();
+        }
+        setupScrollSpy();
+    </script>
+</body>
+</html>

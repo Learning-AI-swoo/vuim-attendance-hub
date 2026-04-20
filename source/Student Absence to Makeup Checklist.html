@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Absence-to-Makeup Checklist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Base typography adjustments for an institutional feel */
+        body {
+            background-color: #f3f4f6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        /* Print optimization to ensure it works beautifully as a physical handout */
+        @media print {
+            body {
+                background-color: white;
+                margin: 0;
+                padding: 0;
+            }
+            #handout-container {
+                box-shadow: none;
+                border: none;
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+            }
+            .print-break-inside-avoid {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-900 antialiased py-8 px-4 md:px-8">
+
+    <!-- Main Portrait Container -->
+    <div id="handout-container" class="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-md border border-slate-200 rounded-sm">
+        
+        <!-- Header Section -->
+        <header class="border-b-2 border-slate-800 pb-6 mb-8">
+            <div class="flex items-center gap-2 mb-2 text-slate-500 font-semibold tracking-wider text-xs uppercase">
+                <i data-lucide="building-2" class="w-4 h-4"></i>
+                Virginia University of Integrative Medicine &bull; Clinic Attendance Quick Reference
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-3 leading-tight">
+                Student Absence-to-Makeup Checklist
+            </h1>
+            <div class="flex items-start gap-3 bg-slate-50 p-4 border-l-4 border-slate-300 text-slate-700">
+                <i data-lucide="info" class="w-5 h-5 text-slate-500 flex-shrink-0 mt-0.5"></i>
+                <p class="text-[1.05rem] leading-relaxed">
+                    Use this checklist when you will miss, or have missed, a clinic shift and need to complete the makeup process correctly.
+                </p>
+            </div>
+        </header>
+
+        <!-- Main Body: Checklist Section -->
+        <main class="mb-10">
+            <h2 class="sr-only">Step-by-Step Process</h2>
+            
+            <div class="space-y-4">
+                <!-- Checklist Items -->
+                <div class="flex items-start gap-4 group">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">1</div>
+                    <div class="pt-1 text-slate-800">Know you will miss, or already missed, a clinic shift</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">2</div>
+                    <div class="pt-1 text-slate-800">Notify your supervisor and copy the DCE Office</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">3</div>
+                    <div class="pt-1 text-slate-800">Submit the Makeup Request Form in Populi</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-red-50 text-red-800 border border-red-200 flex items-center justify-center font-bold text-sm">4</div>
+                    <div class="pt-1 font-semibold text-red-900">Do not assume you are approved</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">5</div>
+                    <div class="pt-1 text-slate-800">Wait for the request to be processed</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">6</div>
+                    <div class="pt-1 text-slate-800">Check the processed Populi response through View Form</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">7</div>
+                    <div class="pt-1 text-slate-800">Verify the approved makeup in the <span class="font-semibold text-blue-700">blue Makeup section</span> of the Live Clinic Schedule</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">8</div>
+                    <div class="pt-1 text-slate-800 font-medium">Attend only the specific approved makeup shift</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">9</div>
+                    <div class="pt-1 text-slate-800">Tell the supervisor you are there for an approved makeup</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">10</div>
+                    <div class="pt-1 text-slate-800">Remain for the full shift and stay actively engaged</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">11</div>
+                    <div class="pt-1 text-slate-800">Get your Clinical Diary signed at the end of the shift</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">12</div>
+                    <div class="pt-1 text-slate-800">If no patients were seen, write <span class="italic font-medium">“No Patients”</span> in the Clinical Diary</div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded bg-slate-100 text-slate-700 border border-slate-300 flex items-center justify-center font-bold text-sm">13</div>
+                    <div class="pt-1 text-slate-800">Show the signed Clinical Diary entry to your original supervisor</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Rule Callout Box -->
+        <aside class="print-break-inside-avoid bg-white border-2 border-slate-800 rounded mb-8">
+            <div class="bg-slate-800 text-white px-5 py-3 flex items-center gap-2">
+                <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                <h3 class="font-bold uppercase tracking-wide text-sm">Key Attendance and Makeup Rules</h3>
+            </div>
+            <div class="p-5 md:p-6 text-slate-800">
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="clock" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                        <div>
+                            <strong>1 to 30 minutes late</strong> = Tardy <br>
+                            <strong>30 to 44 minutes late</strong> = Absence <br>
+                            <strong>45+ minutes late</strong> = May not participate and must make up the shift
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                        <div>Approval is <strong>not</strong> assumed. Only formally approved makeup shifts may be attended.</div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="calendar-check" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                        <div>The Live Clinic Schedule is the authoritative operational source for approved makeups.</div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="pen-line" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                        <div>Clinical Diary signature is required <strong>every</strong> shift.</div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Footer Disclaimer -->
+        <footer class="print-break-inside-avoid border-t border-slate-200 pt-5 text-center">
+            <p class="text-sm text-slate-500">
+                This checklist is a quick-reference tool. The Student Clinic Handbook and official VUIM policies remain the formal authority.
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

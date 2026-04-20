@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Attendance & Makeup Operations Guide — VUIM Spring 2026</title>
+    <meta name="description" content="VUIM clinic supervisors: recording attendance, verifying makeups on the LCS, and the absence-resolution sequence.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="text-slate-900 antialiased py-6 px-4 md:px-8">
+
+    <div class="max-w-6xl mx-auto">
+
+        <nav class="no-print flex items-center justify-between mb-6 text-sm">
+            <a href="../" class="inline-flex items-center text-slate-600 hover:text-slate-900 font-medium">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-1.5"></i> Back to hub
+            </a>
+            <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 border border-slate-300 rounded text-slate-700 hover:bg-slate-100 hover:border-slate-400 font-medium">
+                <i data-lucide="printer" class="w-4 h-4"></i> Print
+            </button>
+        </nav>
+
+        <!-- ============================================================ -->
+        <!-- LAYER 1 — HERO QUICK REFERENCE (Decision Flow)               -->
+        <!-- ============================================================ -->
+        <section id="quick-reference" class="bg-white p-6 md:p-10 shadow-md border border-slate-200 rounded-sm mb-10">
+
+            <header class="border-b-2 border-slate-800 pb-4 mb-6">
+                <div class="flex items-center justify-between mb-2">
+                    <div>
+                        <div class="flex items-center gap-2 text-slate-500 font-semibold tracking-wider text-xs uppercase">
+                            <i data-lucide="building-2" class="w-4 h-4"></i> Supervisor Operational Quick Reference
+                        </div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight uppercase mt-1">Supervisor Attendance &amp; Makeup Decision Flow</h1>
+                    </div>
+                    <span class="hidden md:inline text-sm font-semibold text-slate-500 uppercase tracking-widest text-right">Virginia University of<br>Integrative Medicine</span>
+                </div>
+                <div class="flex items-start bg-slate-50 border-l-4 border-slate-700 p-3 text-slate-700 italic text-sm mt-3">
+                    <i data-lucide="info" class="w-5 h-5 mr-3 text-slate-500 flex-shrink-0 mt-0.5"></i>
+                    <p><strong>Purpose:</strong> Use this decision flow during active clinic operations to manage lateness, absences, unexpected no-shows, and approved makeup students consistently.</p>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+
+                <!-- LEFT LANE: Regular Attendance -->
+                <div class="flex flex-col">
+                    <div class="bg-slate-800 text-white py-2 px-4 rounded-t-md mb-4 flex items-center justify-between">
+                        <h2 class="font-bold tracking-wide uppercase text-sm">Left Lane: Regular Attendance</h2>
+                        <i data-lucide="clock" class="w-4 h-4 opacity-70"></i>
+                    </div>
+
+                    <div class="flex flex-col items-start">
+                        <div class="w-64 flex flex-col items-center mb-1">
+                            <div class="bg-emerald-100 border border-emerald-500 text-emerald-800 font-bold py-2 px-4 rounded-full text-xs shadow-sm uppercase">Start: Student assigned to shift</div>
+                            <div class="h-4 w-px bg-slate-400 mt-1"></div>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400 -mt-1"></i>
+                        </div>
+
+                        <div class="flex items-start w-full">
+                            <div class="bg-white border-2 border-slate-700 rounded-md p-3 w-64 shadow-sm z-10"><p class="text-sm font-semibold text-slate-800 text-center">Did the student arrive on time?</p></div>
+                            <div class="flex items-center ml-2 mt-3">
+                                <span class="bg-slate-100 px-2 py-1 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mr-2">YES</span>
+                                <div class="bg-emerald-50 border border-emerald-400 rounded-md p-2 w-40 shadow-sm flex items-center text-emerald-700 font-bold text-xs">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 mr-2"></i> Mark Present
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center w-64">
+                            <span class="bg-slate-100 px-2 py-0.5 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mb-1 mt-2">NO</span>
+                            <div class="h-4 w-px bg-slate-400"></div>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400 -mt-1"></i>
+                        </div>
+                        <div class="bg-yellow-50 border border-yellow-400 rounded-md p-2 w-64 text-center shadow-sm"><p class="text-[11px] text-yellow-800 font-bold uppercase tracking-tight">Record exact arrival time in Populi comments</p></div>
+                        <div class="flex flex-col items-center w-64 my-1"><div class="h-4 w-px bg-slate-400"></div><i data-lucide="arrow-down" class="w-4 h-4 text-slate-400 -mt-1"></i></div>
+
+                        <div class="flex items-start w-full">
+                            <div class="bg-white border-2 border-slate-700 rounded-md p-3 w-64 shadow-sm z-10"><p class="text-sm font-semibold text-slate-800 text-center">Was student 1–30 mins late?</p></div>
+                            <div class="flex items-center ml-2 mt-3">
+                                <span class="bg-slate-100 px-2 py-1 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mr-2">YES</span>
+                                <div class="bg-amber-50 border border-amber-400 rounded-md p-2 w-40 shadow-sm flex items-center text-amber-700 font-bold text-xs">
+                                    <i data-lucide="alert-triangle" class="w-4 h-4 mr-2"></i> Mark Tardy
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center w-64">
+                            <span class="bg-slate-100 px-2 py-0.5 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mb-1 mt-2">NO</span>
+                            <div class="h-4 w-px bg-slate-400"></div>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400 -mt-1"></i>
+                        </div>
+
+                        <div class="flex items-start w-full">
+                            <div class="bg-white border-2 border-slate-700 rounded-md p-3 w-64 shadow-sm z-10"><p class="text-sm font-semibold text-slate-800 text-center">Was student 30–44 mins late?</p></div>
+                            <div class="flex items-center ml-2 mt-2">
+                                <span class="bg-slate-100 px-2 py-1 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mr-2">YES</span>
+                                <div class="bg-rose-50 border border-rose-300 rounded-md p-2 w-56 shadow-sm">
+                                    <p class="text-rose-800 font-bold text-xs mb-1">Mark Absent</p>
+                                    <ul class="list-disc pl-4 text-[10px] text-rose-700 leading-tight"><li>May remain only if permitted</li><li>No treatment credits earned</li></ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center w-64">
+                            <span class="bg-slate-100 px-2 py-0.5 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mb-1 mt-2">NO</span>
+                            <div class="h-4 w-px bg-slate-400"></div>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400 -mt-1"></i>
+                        </div>
+
+                        <div class="flex items-start w-full">
+                            <div class="bg-white border-2 border-slate-700 rounded-md p-3 w-64 shadow-sm z-10"><p class="text-sm font-semibold text-slate-800 text-center">Was student 45+ mins late?</p></div>
+                            <div class="flex items-center ml-2 mt-2">
+                                <span class="bg-slate-100 px-2 py-1 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mr-2">YES</span>
+                                <div class="bg-red-100 border border-red-400 rounded-md p-2 w-56 shadow-sm">
+                                    <p class="text-red-800 font-bold text-xs mb-1">Mark Absent</p>
+                                    <ul class="list-disc pl-4 text-[10px] text-red-700 leading-tight"><li>Student may not participate</li><li>Student must make up shift</li></ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 bg-red-50 border-l-4 border-red-600 p-3 rounded-r-md shadow-sm w-full">
+                            <div class="flex items-start">
+                                <i data-lucide="alert-triangle" class="w-5 h-5 text-red-600 mr-2 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="text-red-800 font-bold text-xs uppercase mb-1">Escalation Alert</h3>
+                                    <p class="text-[11px] text-red-700 leading-snug font-medium">If absent past 30 mins, no notice given, and not on LCS: <strong>Notify DCE Office immediately.</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT LANE: Makeup Student -->
+                <div class="flex flex-col">
+                    <div class="bg-slate-800 text-white py-2 px-4 rounded-t-md mb-4 flex items-center justify-between">
+                        <h2 class="font-bold tracking-wide uppercase text-sm">Right Lane: Makeup Student</h2>
+                        <i data-lucide="clipboard-check" class="w-4 h-4 opacity-70"></i>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-64 flex flex-col items-center mb-1">
+                            <div class="bg-blue-100 border border-blue-500 text-blue-800 font-bold py-2 px-4 rounded-full text-xs shadow-sm text-center uppercase">Start: Student arrives for makeup</div>
+                            <div class="h-4 w-px bg-slate-400 mt-1"></div>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400 -mt-1"></i>
+                        </div>
+
+                        <div class="bg-white border-2 border-blue-800 rounded-md p-3 w-full max-w-md shadow-sm text-center">
+                            <p class="text-sm font-semibold text-slate-800 leading-tight">Is student listed in the <span class="text-blue-700 font-bold underline">blue Makeup section</span> of the LCS for today/shift?</p>
+                        </div>
+
+                        <div class="flex w-full mt-4 justify-between gap-3">
+                            <div class="flex flex-col items-center w-1/2">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mb-1">NO</span>
+                                <div class="h-4 w-px bg-slate-400"></div>
+                                <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400 -mt-1"></i>
+                                <div class="bg-red-50 border border-red-300 rounded-md p-3 w-full text-center">
+                                    <p class="text-xs font-bold text-red-800 mb-1 uppercase">Do not allow participation</p>
+                                    <p class="text-[10px] text-red-600 font-medium">Direct to DCE Office</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col items-center w-1/2">
+                                <span class="bg-blue-100 px-2 py-0.5 rounded border border-blue-300 text-[10px] font-bold text-blue-700 mb-1">YES</span>
+                                <div class="h-4 w-px bg-blue-400"></div>
+                                <i data-lucide="arrow-down" class="w-4 h-4 text-blue-400 -mt-1"></i>
+                                <div class="bg-emerald-50 border border-emerald-400 rounded-md p-2 w-full text-center mb-3">
+                                    <p class="text-xs font-bold text-emerald-800">Allow participation as approved makeup</p>
+                                </div>
+                                <div class="w-full space-y-2">
+                                    <div class="bg-white border border-slate-400 rounded p-2 text-center text-[11px] leading-tight font-medium shadow-sm">Assign student to group based on operations</div>
+                                    <div class="bg-white border border-slate-400 rounded p-2 text-center text-[11px] leading-tight font-medium shadow-sm">Student must remain for full shift &amp; stay engaged</div>
+                                    <div class="bg-white border border-slate-400 rounded p-2 text-center text-[11px] leading-tight font-medium shadow-sm">Credit earned ONLY via active intern role</div>
+                                    <div class="bg-slate-50 border-2 border-slate-700 rounded p-2 text-[11px] leading-tight shadow-sm">
+                                        <p class="font-bold text-slate-800 mb-1 underline uppercase">Documentation:</p>
+                                        <ul class="list-disc pl-4 space-y-1"><li>Sign Clinical Diary at end of shift</li><li>Document &ldquo;No Patients&rdquo; if applicable</li></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 mb-6">
+                <div class="bg-slate-800 text-white py-1 px-4 rounded-t-md inline-block"><h3 class="text-[10px] font-bold uppercase tracking-widest">Post-Shift Processing</h3></div>
+                <div class="bg-slate-100 border-2 border-slate-800 p-4 rounded-b-md rounded-tr-md shadow-sm">
+                    <p class="text-xs font-bold text-slate-900 mb-3">Original supervisor updates the attendance record <span class="underline">only after</span> completing these three steps:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div class="bg-white p-3 rounded border border-slate-300 shadow-sm flex items-start text-xs font-medium text-slate-700"><i data-lucide="check" class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0"></i>Verifying the approved makeup on the LCS</div>
+                        <div class="bg-white p-3 rounded border border-slate-300 shadow-sm flex items-start text-xs font-medium text-slate-700"><i data-lucide="check" class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0"></i>Reviewing the signed Clinical Diary entry</div>
+                        <div class="bg-white p-3 rounded border border-slate-300 shadow-sm flex items-start text-xs font-medium text-slate-700"><i data-lucide="check" class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0"></i>Entering the makeup date in Populi comments</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 rounded p-3">
+                <h4 class="text-[10px] font-bold uppercase text-blue-800 mb-2 tracking-widest">Quick Operational Reminders</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-1 text-[11px] text-slate-700 font-medium">
+                    <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Record exact arrival times consistently.</div>
+                    <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Supervisors verify makeups; they do not approve them.</div>
+                    <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Blue Makeup section is the source of truth for verification.</div>
+                    <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Clinical Diary MUST be signed every shift.</div>
+                    <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Unexpected absence past 30m without notice = Escalation.</div>
+                    <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Document &ldquo;No Patients&rdquo; whenever applicable.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- LAYER 2 — FULL GUIDE                                         -->
+        <!-- ============================================================ -->
+        <div class="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8">
+
+            <aside class="no-print toc lg:sticky lg:top-6 lg:self-start text-sm">
+                <div class="bg-white border border-slate-200 rounded p-4 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">On this page</p>
+                    <nav>
+                        <ul class="space-y-1.5">
+                            <li><a href="#purpose" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">1. Purpose</a></li>
+                            <li><a href="#responsibilities" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">2. Responsibilities</a></li>
+                            <li><a href="#recording" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">3. Recording Tardy/Absence</a></li>
+                            <li><a href="#late-30-44" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">4. 30–44 Min Late</a></li>
+                            <li><a href="#late-45-plus" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">5. 45+ Min Late</a></li>
+                            <li><a href="#escalation" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">6. Unexpected Absence</a></li>
+                            <li><a href="#approval-vs-verification" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">7. Approval vs. Verify</a></li>
+                            <li><a href="#verify-approved" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">8. Verify on LCS</a></li>
+                            <li><a href="#when-makeup-arrives" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">9. Makeup Arrives</a></li>
+                            <li><a href="#credit" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">10. Credit &amp; Hours</a></li>
+                            <li><a href="#diary" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">11. Clinical Diary</a></li>
+                            <li><a href="#resolution" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">12. Absence Resolution</a></li>
+                            <li><a href="#exceptions" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">13. Closures &amp; Exceptions</a></li>
+                            <li><a href="#errors" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">14. Common Errors</a></li>
+                            <li><a href="#key-takeaways" class="toc-link block border-l-2 border-transparent pl-3 py-0.5 text-slate-600 hover:text-slate-900 hover:border-slate-400">15. Key Takeaways</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+
+            <article class="guide-section bg-white p-8 md:p-12 shadow-md border border-slate-200 rounded-sm">
+
+                <header class="border-b-2 border-slate-800 pb-6 mb-8">
+                    <div class="flex items-center gap-2 mb-2 text-slate-500 font-semibold tracking-wider text-xs uppercase">
+                        <i data-lucide="stethoscope" class="w-4 h-4"></i> Supervisor Full Guide &bull; Spring 2026
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Supervisor Attendance &amp; Makeup Operations Guide</h2>
+                </header>
+
+                <section id="purpose" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Purpose and How to Use This Guide <a class="anchor" href="#purpose">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed">This guide establishes standardized operational procedures for managing student attendance and makeup shifts within the East Asian Medicine (EAM) clinic. Supervisors must use this document to ensure clinical consistency, accurate record-keeping, and strict adherence to institutional policy. This guide focuses on operational execution; for formal policy language, refer to the Student and Supervisor Handbooks.</p>
+                </section>
+
+                <section id="responsibilities" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">2. Core Supervisor Responsibilities <a class="anchor" href="#responsibilities">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">Supervisors are the primary agents of clinic accountability. Responsibilities include:</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="resp-attendance" class="scroll-mt-24"><strong>Accurate Attendance Entry:</strong> Recording exact arrival times for all students in Populi.</li>
+                        <li id="resp-verification" class="scroll-mt-24"><strong>Verification:</strong> Confirming student eligibility for makeup shifts via the Live Clinic Schedule (LCS).</li>
+                        <li id="resp-documentation" class="scroll-mt-24"><strong>Documentation:</strong> Signing Clinical Diary entries and workbooks accurately, including notations for shifts with no patients.</li>
+                        <li id="resp-execution" class="scroll-mt-24"><strong>Operational Execution:</strong> Managing group assignments and ensuring treatment credits are only awarded for active intern roles.</li>
+                    </ul>
+                </section>
+
+                <section id="recording" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">3. Recording Tardiness and Absences <a class="anchor" href="#recording">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">Supervisors must record the <strong>exact arrival time</strong> in the Populi comment field for any student who arrives after the designated start of the shift (<strong>8:30 AM or 1:30 PM</strong>).</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="tardy-window" class="scroll-mt-24"><strong>1 to 30 minutes late:</strong> Tardy</li>
+                        <li id="absence-threshold" class="scroll-mt-24"><strong>30 minutes or more late:</strong> Absence</li>
+                    </ul>
+                </section>
+
+                <section id="late-30-44" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">4. Handling 30 to 44 Minute Late Arrivals <a class="anchor" href="#late-30-44">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">If a student arrives between 30 and 44 minutes late:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                        <li>The student is marked <strong>Absent</strong> in Populi.</li>
+                        <li>No treatment credits will be awarded for that shift.</li>
+                        <li>If operationally permitted by the supervisor, the student may remain for the shift.</li>
+                    </ul>
+                </section>
+
+                <section id="late-45-plus" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">5. Handling 45+ Minute Late Arrivals <a class="anchor" href="#late-45-plus">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">If a student arrives 45 minutes or more after the start of the shift:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                        <li>The student is marked <strong>Absent</strong> in Populi.</li>
+                        <li>The student must leave the clinic and make up the shift.</li>
+                    </ul>
+                </section>
+
+                <section id="escalation" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">6. Supervisor Notification of Unexpected Absence <a class="anchor" href="#escalation">#</a></h2>
+                    <div class="bg-red-50 border-l-4 border-red-600 p-4 text-red-900">
+                        <p class="leading-relaxed">If a student is absent past the 30-minute mark and the absence was not already reflected on the Live Clinic Schedule (LCS), and the student has not contacted the supervisor regarding the absence, the supervisor must <strong>notify the DCE Office immediately</strong>. This helps ensure timely follow-up, attendance review, and appropriate documentation of unexpected or potentially unreported absences.</p>
+                    </div>
+                </section>
+
+                <section id="approval-vs-verification" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">7. Makeup Approval vs. Makeup Verification <a class="anchor" href="#approval-vs-verification">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed">Supervisors <strong>do not approve</strong> makeup shifts. Only the DCE Office or designated clinical administration has the authority to approve makeup requests. The supervisor's role is to <strong>verify</strong> that a student has already received official approval before allowing them to join the shift.</p>
+                </section>
+
+                <section id="verify-approved" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">8. How to Verify an Approved Makeup <a class="anchor" href="#verify-approved">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">The <strong>Live Clinic Schedule (LCS)</strong> is the authoritative operational source for verifying approved makeup shifts. Supervisors must check the <span class="text-blue-700 font-semibold">blue &ldquo;Makeup&rdquo; section</span> for the specific date and shift.</p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                        <li>Supervisors do not have independent access to student Populi confirmation forms.</li>
+                        <li>If a student believes there is an error in the LCS, the student may show their processed Populi response or View Form result, but the student should be directed to contact the DCE Office for resolution before participating as a makeup.</li>
+                    </ul>
+                </section>
+
+                <section id="when-makeup-arrives" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">9. What to Do When a Makeup Student Arrives <a class="anchor" href="#when-makeup-arrives">#</a></h2>
+                    <ol class="list-decimal pl-6 space-y-3 text-slate-700">
+                        <li id="step-verify" class="scroll-mt-24"><strong>Verify:</strong> Confirm the student is listed in the LCS blue section.</li>
+                        <li id="step-coordinate" class="scroll-mt-24"><strong>Coordinate:</strong> Coordinate with reception/front desk as needed.</li>
+                        <li id="step-assign" class="scroll-mt-24"><strong>Assign:</strong> Place the student in a group. Priority should be given to existing single-intern groups. If no single groups are available, the student may work in the designated <strong>Makeup Group</strong>.</li>
+                        <li id="step-manage" class="scroll-mt-24"><strong>Manage:</strong> Ensure the student is actively participating in patient care or directed clinical learning.</li>
+                    </ol>
+                </section>
+
+                <section id="credit" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">10. Hours, Treatment Credit, and Participation <a class="anchor" href="#credit">#</a></h2>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="credit-hours" class="scroll-mt-24"><strong>Attendance Hours:</strong> Clinical attendance hours may be credited when the student attends the full shift, remains actively engaged as directed, and properly documents the shift in the Clinical Diary.</li>
+                        <li id="credit-treatment" class="scroll-mt-24"><strong>Treatment Credit:</strong> Awarded only for active participation in <strong>Lead Intern</strong> or <strong>Assistant Intern</strong> roles.</li>
+                        <li id="credit-no-patients" class="scroll-mt-24"><strong>No-Patient Scenarios:</strong> If no patients are available, the student must remain engaged in directed clinical learning activities as assigned by the supervisor.</li>
+                        <li id="credit-oversight" class="scroll-mt-24"><strong>Oversight:</strong> Supervisors sign the Clinical Diary at the end of the shift as usual. The DCE handles the final processing of treatment-credit limits during the formal workbook review.</li>
+                    </ul>
+                </section>
+
+                <section id="diary" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">11. Clinical Diary Documentation <a class="anchor" href="#diary">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">Accurate documentation is required for every shift.</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="diary-signature" class="scroll-mt-24"><strong>Signature Required:</strong> Supervisors must sign the student's Clinical Diary at the end of <strong>every</strong> shift to confirm attendance.</li>
+                        <li id="diary-no-patients" class="scroll-mt-24"><strong>No Patients:</strong> If no patients were seen during the shift, &ldquo;No Patients&rdquo; should be written in the diary entry.</li>
+                    </ul>
+                </section>
+
+                <section id="resolution" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">12. Absence Resolution and Attendance Updates <a class="anchor" href="#resolution">#</a></h2>
+                    <p class="text-slate-700 leading-relaxed mb-3">To resolve an &ldquo;Absent&rdquo; status in Populi:</p>
+                    <ol class="list-decimal pl-6 space-y-3 text-slate-700">
+                        <li>The student must present their signed Clinical Diary entry from the makeup shift to their original supervisor (the supervisor of the missed shift).</li>
+                        <li>The original supervisor verifies the makeup completion against the LCS.</li>
+                        <li>The original supervisor updates the status in Populi from <strong>&ldquo;Absent&rdquo; to &ldquo;Excused.&rdquo;</strong></li>
+                        <li id="resolution-step-4" class="scroll-mt-24"><strong>The supervisor must enter the date the makeup was completed in the Populi comment field.</strong></li>
+                    </ol>
+                </section>
+
+                <section id="exceptions" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">13. School Closures and Rare Exceptions <a class="anchor" href="#exceptions">#</a></h2>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="closures" class="scroll-mt-24"><strong>Closures:</strong> Shifts missed due to holidays, snow days, etc., must be made up. These do not count toward the &ldquo;one excused absence per course, per quarter&rdquo; allowance.</li>
+                        <li id="incomplete" class="scroll-mt-24"><strong>Incomplete Grades:</strong> This is a rare exception for documented emergencies. Incomplete should not be relied upon for normal scheduling or routine absences. Questions about Incomplete eligibility should be referred to the DCE Office.</li>
+                    </ul>
+                </section>
+
+                <section id="errors" class="mb-10 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">14. Common Supervisor Errors and Wrong Assumptions <a class="anchor" href="#errors">#</a></h2>
+                    <ul class="space-y-3 text-slate-700">
+                        <li id="err-unauthorized" class="scroll-mt-24"><strong>Unauthorized Approval:</strong> Verbally granting a student a makeup shift without DCE approval.</li>
+                        <li id="err-inaccurate" class="scroll-mt-24"><strong>Inaccurate Entry:</strong> Recording school closures or snow days as &ldquo;Present&rdquo; instead of &ldquo;Absent.&rdquo;</li>
+                        <li id="err-processing" class="scroll-mt-24"><strong>Processing Errors:</strong> Marking a completed makeup shift as &ldquo;Present&rdquo; instead of &ldquo;Excused&rdquo; in the original record.</li>
+                        <li id="err-missing-data" class="scroll-mt-24"><strong>Missing Data:</strong> Marking a shift &ldquo;Excused&rdquo; without entering the makeup completion date in the Populi comment field.</li>
+                        <li id="err-missing-escalation" class="scroll-mt-24"><strong>Missing Escalation:</strong> Failing to notify the DCE Office when a student is unexpectedly absent past the 30-minute mark without prior notice or LCS indication.</li>
+                    </ul>
+                </section>
+
+                <section id="key-takeaways" class="mb-8 scroll-mt-24">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">15. Key Takeaways <a class="anchor" href="#key-takeaways">#</a></h2>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                        <li>Record the <strong>exact arrival time</strong> for every student who is not on time.</li>
+                        <li>30 to 44 minutes late results in an Absence and loss of treatment credits.</li>
+                        <li>45+ minutes late results in an Absence and the student must leave the clinic.</li>
+                        <li>The LCS blue section is the only authoritative source for makeup verification.</li>
+                        <li>Supervisors <strong>verify</strong> — they do not approve.</li>
+                    </ul>
+                </section>
+
+                <section id="disclaimer" class="border-t border-slate-200 pt-6 scroll-mt-24">
+                    <h3 class="text-base font-bold text-slate-700 mb-2">Disclaimer</h3>
+                    <p class="text-sm text-slate-600 italic leading-relaxed">This guide serves as an operational supplement. The VUIM Student Clinic Handbook and Supervisor Handbook remain the formal authorities on all institutional policies. In the event of a conflict between this guide and the Handbooks (as updated by official University memos), the Handbooks shall govern.</p>
+                </section>
+            </article>
+        </div>
+
+        <footer class="mt-10 text-center text-sm text-slate-500">
+            <p>Virginia University of Integrative Medicine &middot; Questions: <a href="mailto:dce@vuim.edu" class="text-slate-700 underline hover:text-slate-900">dce@vuim.edu</a> &middot; The VUIM Handbooks remain the formal authority.</p>
+            <p class="mt-1 text-xs text-slate-400">Effective: Spring 2026 &middot; Updated 04.18.26</p>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        function setupScrollSpy() {
+            const tocLinks = Array.from(document.querySelectorAll('.toc-link'));
+            if (!tocLinks.length) return;
+            const linkByHash = new Map(tocLinks.map(l => [l.getAttribute('href'), l]));
+            const sections = tocLinks.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+
+            const setActive = (hash) => {
+                tocLinks.forEach(l => l.classList.toggle('active', l === linkByHash.get(hash)));
+            };
+
+            const sectionForElement = (el) => {
+                while (el) {
+                    if (el.id && linkByHash.has('#' + el.id)) return el;
+                    el = el.parentElement;
+                }
+                return null;
+            };
+
+            tocLinks.forEach(l => l.addEventListener('click', () => setActive(l.getAttribute('href'))));
+
+            const syncFromHash = () => {
+                if (!window.location.hash) return;
+                const el = document.querySelector(window.location.hash);
+                if (!el) return;
+                const section = sectionForElement(el);
+                if (section) setActive('#' + section.id);
+            };
+
+            // rootMargin crops the IO viewport to a thin band ~12–20% from the top,
+            // so only the section whose heading is near the top of the content area qualifies.
+            const visibleIds = new Set();
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) visibleIds.add(e.target.id);
+                    else visibleIds.delete(e.target.id);
+                });
+                if (visibleIds.size === 0) return;
+                let bestId = null;
+                let bestTop = -Infinity;
+                for (const id of visibleIds) {
+                    const top = document.getElementById(id).getBoundingClientRect().top;
+                    if (top > bestTop) { bestTop = top; bestId = id; }
+                }
+                if (bestId) setActive('#' + bestId);
+            }, { rootMargin: '-12% 0px -80% 0px', threshold: 0 });
+            sections.forEach(s => observer.observe(s));
+
+            window.addEventListener('hashchange', syncFromHash);
+            syncFromHash();
+        }
+        setupScrollSpy();
+    </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Attendance & Makeup Decision Flow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            body { background-color: white !important; padding: 0 !important; }
+            .no-print { display: none !important; }
+            .print-container { box-shadow: none !important; border: none !important; width: 100% !important; max-width: none !important; padding: 0 !important; }
+            @page { size: landscape; margin: 0.5cm; }
+        }
+        body { background-color: #f1f5f9; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    </style>
+</head>
+<body class="p-4 md:p-8 flex justify-center items-start">
+
+    <!-- Main Container -->
+    <div class="print-container bg-white w-full max-w-[1300px] shadow-lg border border-slate-300 p-8 rounded-lg">
+        
+        <!-- Header Section -->
+        <header class="border-b-2 border-slate-800 pb-4 mb-6">
+            <div class="flex items-center justify-between mb-2">
+                <h1 class="text-2xl font-bold text-slate-900 tracking-tight uppercase">Supervisor Attendance & Makeup Decision Flow</h1>
+                <span class="text-sm font-semibold text-slate-500 uppercase tracking-widest text-right">Virginia University of<br>Integrative Medicine</span>
+            </div>
+            <div class="flex items-start bg-slate-50 border-l-4 border-slate-700 p-3 text-slate-700 italic text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3 text-slate-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <p><strong>Purpose:</strong> Use this decision flow during active clinic operations to manage lateness, absences, unexpected no-shows, and approved makeup students consistently.</p>
+            </div>
+        </header>
+
+        <!-- Main Columns Grid -->
+        <div class="grid grid-cols-2 gap-8 mb-8">
+            
+            <!-- LEFT LANE: Regular Attendance -->
+            <div class="flex flex-col">
+                <div class="bg-slate-800 text-white py-2 px-4 rounded-t-md mb-4 flex items-center justify-between">
+                    <h2 class="font-bold tracking-wide uppercase text-sm">Left Lane: Regular Attendance</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+
+                <div class="flex flex-col items-start pl-2">
+                    <!-- Start Point -->
+                    <div class="w-64 flex flex-col items-center mb-1">
+                        <div class="bg-emerald-100 border border-emerald-500 text-emerald-800 font-bold py-2 px-4 rounded-full text-xs shadow-sm uppercase">
+                            Start: Student assigned to shift
+                        </div>
+                        <div class="h-4 w-px bg-slate-400 mt-1"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="flex items-start w-full">
+                        <div class="bg-white border-2 border-slate-700 rounded-md p-3 w-64 shadow-sm z-10">
+                            <p class="text-sm font-semibold text-slate-800 text-center">Did the student arrive on time?</p>
+                        </div>
+                        <div class="flex items-center ml-2 mt-3">
+                            <div class="flex items-center text-slate-500 font-medium text-[10px] mr-2">
+                                <span class="bg-slate-100 px-2 py-1 rounded border border-slate-300">YES</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </div>
+                            <div class="bg-emerald-50 border border-emerald-400 rounded-md p-2 w-40 shadow-sm flex items-center text-emerald-700 font-bold text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                Mark Present
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NO Path Connector -->
+                    <div class="flex flex-col items-center w-64">
+                        <span class="bg-slate-100 px-2 py-0.5 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mb-1">NO</span>
+                        <div class="h-4 w-px bg-slate-400"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                    </div>
+
+                    <!-- Action Box -->
+                    <div class="bg-yellow-50 border border-yellow-400 rounded-md p-2 w-64 text-center shadow-sm">
+                        <p class="text-[11px] text-yellow-800 font-bold uppercase tracking-tight">Record exact arrival time in Populi comments</p>
+                    </div>
+                    <div class="flex flex-col items-center w-64 my-1">
+                        <div class="h-4 w-px bg-slate-400"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-start w-full">
+                        <div class="bg-white border-2 border-slate-700 rounded-md p-3 w-64 shadow-sm z-10">
+                            <p class="text-sm font-semibold text-slate-800 text-center">Was student 1–30 mins late?</p>
+                        </div>
+                        <div class="flex items-center ml-2 mt-3">
+                            <div class="flex items-center text-slate-500 font-medium text-[10px] mr-2">
+                                <span class="bg-slate-100 px-2 py-1 rounded border border-slate-300">YES</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </div>
+                            <div class="bg-amber-50 border border-amber-400 rounded-md p-2 w-40 shadow-sm flex items-center text-amber-700 font-bold text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                Mark Tardy
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NO Path Connector -->
+                    <div class="flex flex-col items-center w-64">
+                        <span class="bg-slate-100 px-2 py-0.5 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mb-1">NO</span>
+                        <div class="h-4 w-px bg-slate-400"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-start w-full">
+                        <div class="bg-white border-2 border-slate-700 rounded-md p-3 w-64 shadow-sm z-10">
+                            <p class="text-sm font-semibold text-slate-800 text-center">Was student 30–44 mins late?</p>
+                        </div>
+                        <div class="flex items-center ml-2 mt-2">
+                            <div class="flex items-center text-slate-500 font-medium text-[10px] mr-2">
+                                <span class="bg-slate-100 px-2 py-1 rounded border border-slate-300">YES</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </div>
+                            <div class="bg-rose-50 border border-rose-300 rounded-md p-2 w-56 shadow-sm">
+                                <p class="text-rose-800 font-bold text-xs mb-1">Mark Absent</p>
+                                <ul class="list-disc pl-4 text-[10px] text-rose-700 leading-tight">
+                                    <li>May remain only if permitted</li>
+                                    <li>No treatment credits earned</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NO Path Connector -->
+                    <div class="flex flex-col items-center w-64">
+                        <span class="bg-slate-100 px-2 py-0.5 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mb-1">NO</span>
+                        <div class="h-4 w-px bg-slate-400"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex items-start w-full">
+                        <div class="bg-white border-2 border-slate-700 rounded-md p-3 w-64 shadow-sm z-10">
+                            <p class="text-sm font-semibold text-slate-800 text-center">Was student 45+ mins late?</p>
+                        </div>
+                        <div class="flex items-center ml-2 mt-2">
+                            <div class="flex items-center text-slate-500 font-medium text-[10px] mr-2">
+                                <span class="bg-slate-100 px-2 py-1 rounded border border-slate-300">YES</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </div>
+                            <div class="bg-red-100 border border-red-400 rounded-md p-2 w-56 shadow-sm">
+                                <p class="text-red-800 font-bold text-xs mb-1">Mark Absent</p>
+                                <ul class="list-disc pl-4 text-[10px] text-red-700 leading-tight">
+                                    <li>Student may not participate</li>
+                                    <li>Student must make up shift</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Escalation Alert -->
+                    <div class="mt-6 bg-red-50 border-l-4 border-red-600 p-3 rounded-r-md shadow-sm w-full">
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            <div>
+                                <h3 class="text-red-800 font-bold text-xs uppercase mb-1">Escalation Alert</h3>
+                                <p class="text-[11px] text-red-700 leading-snug font-medium">If absent past 30 mins, no notice given, and not on LCS: <strong>Notify DCE Office immediately.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT LANE: Makeup Student -->
+            <div class="flex flex-col">
+                <div class="bg-slate-800 text-white py-2 px-4 rounded-t-md mb-4 flex items-center justify-between">
+                    <h2 class="font-bold tracking-wide uppercase text-sm">Right Lane: Makeup Student</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <!-- Start Point -->
+                    <div class="w-64 flex flex-col items-center mb-1">
+                        <div class="bg-blue-100 border border-blue-500 text-blue-800 font-bold py-2 px-4 rounded-full text-xs shadow-sm text-center uppercase">
+                            Start: Student arrives for makeup
+                        </div>
+                        <div class="h-4 w-px bg-slate-400 mt-1"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                    </div>
+
+                    <!-- Decision Box -->
+                    <div class="bg-white border-2 border-blue-800 rounded-md p-3 w-80 shadow-sm text-center">
+                        <p class="text-sm font-semibold text-slate-800 leading-tight">Is student listed in the <span class="text-blue-700 font-bold underline">blue Makeup section</span> of the LCS for today/shift?</p>
+                    </div>
+
+                    <!-- Fork -->
+                    <div class="flex w-full mt-4 justify-between px-4">
+                        <!-- NO Branch -->
+                        <div class="flex flex-col items-center w-[45%]">
+                            <span class="bg-slate-100 px-2 py-0.5 rounded border border-slate-300 text-[10px] font-bold text-slate-500 mb-1">NO</span>
+                            <div class="h-4 w-px bg-slate-400"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                            <div class="bg-red-50 border border-red-300 rounded-md p-3 w-full text-center">
+                                <p class="text-xs font-bold text-red-800 mb-1 uppercase">Do not allow participation</p>
+                                <p class="text-[10px] text-red-600 font-medium">Direct to DCE Office</p>
+                            </div>
+                        </div>
+
+                        <!-- YES Branch -->
+                        <div class="flex flex-col items-center w-[45%]">
+                            <span class="bg-blue-100 px-2 py-0.5 rounded border border-blue-300 text-[10px] font-bold text-blue-700 mb-1">YES</span>
+                            <div class="h-4 w-px bg-blue-400"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-400 -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                            <div class="bg-emerald-50 border border-emerald-400 rounded-md p-2 w-full text-center mb-4">
+                                <p class="text-xs font-bold text-emerald-800">Allow participation as approved makeup</p>
+                            </div>
+
+                            <!-- Linear Actions -->
+                            <div class="w-full space-y-2">
+                                <div class="bg-white border border-slate-400 rounded p-2 text-center text-[11px] leading-tight font-medium shadow-sm">
+                                    Assign student to group based on operations
+                                </div>
+                                <div class="bg-white border border-slate-400 rounded p-2 text-center text-[11px] leading-tight font-medium shadow-sm">
+                                    Student must remain for full shift & stay engaged
+                                </div>
+                                <div class="bg-white border border-slate-400 rounded p-2 text-center text-[11px] leading-tight font-medium shadow-sm">
+                                    Credit earned ONLY via active intern role
+                                </div>
+                                <div class="bg-slate-50 border-2 border-slate-700 rounded p-2 text-[11px] leading-tight shadow-sm">
+                                    <p class="font-bold text-slate-800 mb-1 underline uppercase">Documentation:</p>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Sign Clinical Diary at end of shift</li>
+                                        <li>Document "No Patients" if applicable</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post-Shift Processing Box -->
+        <div class="mt-4 mb-6">
+            <div class="bg-slate-800 text-white py-1 px-4 rounded-t-md inline-block">
+                <h3 class="text-[10px] font-bold uppercase tracking-widest">Post-Shift Processing</h3>
+            </div>
+            <div class="bg-slate-100 border-2 border-slate-800 p-4 rounded-b-md rounded-tr-md shadow-sm">
+                <p class="text-xs font-bold text-slate-900 mb-3">Original supervisor updates the attendance record <span class="underline">only after</span> completing these three steps:</p>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white p-3 rounded border border-slate-300 shadow-sm flex items-start text-xs font-medium text-slate-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        Verifying the approved makeup on the LCS
+                    </div>
+                    <div class="bg-white p-3 rounded border border-slate-300 shadow-sm flex items-start text-xs font-medium text-slate-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        Reviewing the signed Clinical Diary entry
+                    </div>
+                    <div class="bg-white p-3 rounded border border-slate-300 shadow-sm flex items-start text-xs font-medium text-slate-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        Entering the makeup date in Populi comments
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reminders -->
+        <div class="bg-blue-50 border border-blue-200 rounded p-3 mb-4">
+            <h4 class="text-[10px] font-bold uppercase text-blue-800 mb-2 tracking-widest">Quick Operational Reminders</h4>
+            <div class="grid grid-cols-2 gap-x-12 gap-y-1 text-[10px] text-slate-700 font-medium">
+                <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Record exact arrival times consistently.</div>
+                <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Supervisors verify makeups; they do not approve them.</div>
+                <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Blue Makeup section is the source of truth for verification.</div>
+                <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Clinical Diary MUST be signed every shift.</div>
+                <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Unexpected absence past 30m without notice = Escalation.</div>
+                <div class="flex items-center"><div class="w-1 h-1 bg-blue-400 rounded-full mr-2"></div> Document "No Patients" whenever applicable.</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="border-t border-slate-200 pt-3 text-center">
+            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-tight">
+                Operational Reference Tool • Formal authority resides in Student & Supervisor Handbooks and VUIM Policies
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>

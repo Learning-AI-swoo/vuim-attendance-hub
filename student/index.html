@@ -372,37 +372,52 @@
                 return null;
             };
 
-            tocLinks.forEach(l => l.addEventListener('click', () => setActive(l.getAttribute('href'))));
+            // Anchor landings place a section's top at scroll-padding-top + scroll-margin-top
+            // (6rem + 6rem = 192px). Active = last section whose top has crossed that line.
+            // A percentage IntersectionObserver band fails on viewports shorter than ~960px:
+            // the landed heading falls below the band and the previous section wins.
+            const ACTIVE_OFFSET = 200;
+            let rafPending = false;
+            let suppressUntil = 0;
+            const update = () => {
+                rafPending = false;
+                let activeId = null;
+                for (const s of sections) {
+                    if (s.getBoundingClientRect().top <= ACTIVE_OFFSET) activeId = s.id;
+                    else break;
+                }
+                if (activeId) setActive('#' + activeId);
+            };
+            const onScroll = () => {
+                if (Date.now() < suppressUntil) return;
+                if (rafPending) return;
+                rafPending = true;
+                requestAnimationFrame(update);
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+
+            tocLinks.forEach(l => l.addEventListener('click', () => {
+                setActive(l.getAttribute('href'));
+                // Suppress scroll-driven updates while smooth-scroll settles,
+                // so the TOC doesn't flicker through intermediate sections.
+                suppressUntil = Date.now() + 1000;
+            }));
 
             const syncFromHash = () => {
                 if (!window.location.hash) return;
                 const el = document.querySelector(window.location.hash);
                 if (!el) return;
                 const section = sectionForElement(el);
-                if (section) setActive('#' + section.id);
-            };
-
-            // rootMargin crops the IO viewport to a thin band ~12–20% from the top,
-            // so only the section whose heading is near the top of the content area qualifies.
-            const visibleIds = new Set();
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) visibleIds.add(e.target.id);
-                    else visibleIds.delete(e.target.id);
-                });
-                if (visibleIds.size === 0) return;
-                let bestId = null;
-                let bestTop = -Infinity;
-                for (const id of visibleIds) {
-                    const top = document.getElementById(id).getBoundingClientRect().top;
-                    if (top > bestTop) { bestTop = top; bestId = id; }
+                if (section) {
+                    setActive('#' + section.id);
+                    suppressUntil = Date.now() + 1000;
                 }
-                if (bestId) setActive('#' + bestId);
-            }, { rootMargin: '-12% 0px -80% 0px', threshold: 0 });
-            sections.forEach(s => observer.observe(s));
+            };
 
             window.addEventListener('hashchange', syncFromHash);
             syncFromHash();
+            update();
         }
         setupScrollSpy();
     </script>
